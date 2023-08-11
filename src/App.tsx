@@ -23,7 +23,7 @@ function filter(type: TodosFilterEnum, toFilter: Todo[]) {
 }
 
 export const App: React.FC = () => {
-  const [todos, setTodos] = useLocalStorage('todos', []);
+  const [todos, setTodos] = useLocalStorage<Todo[]>('todos', []);
   const [filterType, setFilterType] = useState<TodosFilterEnum>(TodosFilterEnum.ALL);
   const showFooter = todos.length > 0;
 
