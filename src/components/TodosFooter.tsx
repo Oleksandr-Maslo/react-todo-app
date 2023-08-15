@@ -8,11 +8,11 @@ export const TodosFooter: React.FC = () => {
     setTodos,
   } = useContext(TodosContext);
 
-  function clearCompleted() {
+  const clearCompleted = () => {
     const newTodos = todos.filter((item) => !item.completed);
 
     setTodos(newTodos);
-  }
+  };
 
   return (
     <footer className="footer">

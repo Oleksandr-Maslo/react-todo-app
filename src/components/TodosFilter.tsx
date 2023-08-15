@@ -4,6 +4,7 @@ import { TodosContext } from './TodosContext';
 
 export const TodosFilter: React.FC = () => {
   const { filterType, setFilterType } = useContext(TodosContext);
+
   const makeSetFilterType = (type: TodosFilterEnum) => (
     () => setFilterType(type));
 

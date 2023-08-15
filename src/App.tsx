@@ -7,7 +7,7 @@ import { Todo } from './types/Todo';
 import { TodosFilterEnum } from './types/Filter';
 import { TodosContext } from './components/TodosContext';
 
-function filter(type: TodosFilterEnum, toFilter: Todo[]) {
+const filter = (type: TodosFilterEnum, toFilter: Todo[]) => {
   switch (type) {
     case TodosFilterEnum.ACTIVE:
 
@@ -20,7 +20,7 @@ function filter(type: TodosFilterEnum, toFilter: Todo[]) {
 
     default: return toFilter;
   }
-}
+};
 
 export const App: React.FC = () => {
   const [todos, setTodos] = useLocalStorage<Todo[]>('todos', []);

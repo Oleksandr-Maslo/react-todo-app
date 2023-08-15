@@ -16,10 +16,10 @@ export function useLocalStorage<T>(
     setValue(JSON.parse(data));
   }, []);
 
-  const save = (newValue: T) => {
+  function save(newValue: T) {
     localStorage.setItem(key, JSON.stringify(newValue));
     setValue(newValue);
-  };
+  }
 
   return [value, save];
 }

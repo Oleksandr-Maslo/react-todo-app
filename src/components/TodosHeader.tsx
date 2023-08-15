@@ -9,7 +9,7 @@ export const TodosHeader: React.FC = () => {
   const id = +new Date();
   const completed = false;
 
-  function addTodo() {
+  const addTodo = () => {
     if (title.trim().length) {
       const newTodo: Todo = {
         title,
@@ -20,7 +20,7 @@ export const TodosHeader: React.FC = () => {
       setTodos([...todos, newTodo]);
       setTitle('');
     }
-  }
+  };
 
   return (
     <header className="header">

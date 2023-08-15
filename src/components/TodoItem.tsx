@@ -17,7 +17,7 @@ export const TodoItem: React.FC<Props> = ({
   const [editableTodoId, setEditableTodoId] = useState<number | null>(null);
   const [newTitle, setNewTitle] = useState(todo.title);
 
-  function changeChecked(todoChange: Todo) {
+  const changeChecked = (todoChange: Todo) => {
     const newTodos = todos.map((currentTodo) => {
       if (currentTodo.id === todoChange.id) {
         return {
@@ -30,16 +30,16 @@ export const TodoItem: React.FC<Props> = ({
     });
 
     setTodos(newTodos);
-  }
+  };
 
-  function deleteTodo(todoId: number) {
+  const deleteTodo = (todoId: number) => {
     const newTodos = todos.filter((currentTodo) => (
       currentTodo.id !== todoId));
 
     setTodos(newTodos);
-  }
+  };
 
-  function editTodo(todoChange: Todo) {
+  const editTodo = (todoChange: Todo) => {
     let newTodos;
 
     if (newTitle === todoChange.title) {
@@ -67,7 +67,7 @@ export const TodoItem: React.FC<Props> = ({
 
     setTodos(newTodos);
     setEditableTodoId(null);
-  }
+  };
 
   return (
     <li
