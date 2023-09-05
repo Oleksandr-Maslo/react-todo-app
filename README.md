@@ -6,7 +6,7 @@ A single-page application that allows users to create and manage a list of tasks
 # Technologies used
 - React.js
 - React Router(v6)
-- React TRANSITION GROUP
+- React
 - TypeScript
 - JavaScript
 - Fetch, REST API
